@@ -1,0 +1,23 @@
+<!-- from https://channels.readthedocs.io/en/stable/tutorial/part_1.html -->
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="welcome">
+    <h1>Welcome to ChatBox</h1>
+</div>
+
+
+
+<div class="container">
+
+    <h5 class="card-title">What Chat Room would you like to enter?</h5>
+    <p class="card-text"></p>
+    <input class='textInput' id="room-name-input" type="text" size="100" required><br>
+    <input class='btn btn-outline-success' id="room-name-submit" type="button" value="Join Chat Room">
+    
+</div>
+
+<script src="{% static 'js/index.js' %}"></script>
+
+{% endblock content %}

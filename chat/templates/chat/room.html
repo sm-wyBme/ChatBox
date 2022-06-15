@@ -1,0 +1,38 @@
+<!-- from https://channels.readthedocs.io/en/stable/tutorial/part_2.html -->
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="welcome">
+    <h1>Welcome to Room: {{room_name}}</h1>
+</div>
+
+<div class="container">
+    <div id='chat-log' style="overflow-y: auto; max-height: 300px;">
+        {% for chat in chats.all %}
+            {% if chat.user.id == request.user.id %}
+            <div class="message sender">
+                {{ chat.content }}
+            </div>
+            {% else %}
+            <div class="message receiver">
+                {{ chat.content }}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <!-- <textarea id="chat-log" cols="100" rows="20"></textarea><br> -->
+    <input class='textInput' id="chat-message-input" type="text" size="100" required><br>
+    <input class='btn btn-outline-success' id="chat-message-submit" type="button" value="Send Message">
+    {{ room_name|json_script:"room-name" }}
+</div>
+{{ request.user.id|json_script:"user-id" }}
+
+<div class="leave-button">
+    <a href="{% url 'chat:index' %}" class='btn btn-danger'>Leave Room</a>
+</div>
+
+<script src="{% static 'js/room.js' %}"></script>
+{% endblock content %}

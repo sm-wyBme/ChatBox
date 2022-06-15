@@ -1,0 +1,80 @@
+.container {
+    width: 80vw;
+    margin: 30px auto; 
+    padding: 25px 10px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0, 0, 0, 0,22); */
+    box-shadow: 5px 10px #888888;
+}
+
+.welcome {
+    width: 80vw;
+    margin: auto;
+    padding: 25px 10px;
+    text-align: center;
+    /* background-color: #ffffff;
+    box-shadow: 5px 10px #888888; */
+    
+}
+
+.textInput{
+    border: none;
+    border-bottom: 2px solid #ddd;
+    line-height: 1.2rem;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.textInput:focus {
+    outline: none;
+    border-bottom: 2px solid #333;
+    transition: 0.3s;
+}
+
+.emptyText{
+    font-size: 1.5rem;
+}
+
+.message{
+    /* background-color:  */
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 2rem;
+    margin: 15px 0px;
+    width: 60%;
+    overflow-wrap: break-all;
+    text-align: center;
+}
+
+.sender {
+    background-color:rgb(218, 191, 57);
+    margin-left: auto;
+}
+
+.receiver {
+    background-color:rgb(15, 168, 43);
+
+}
+
+.leave-button{
+    text-align: center;
+    margin:auto;
+    padding: 10px;
+}
+
+.sign-out{
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.sign-out:hover{
+    cursor: pointer;
+    color: #1d5a98;
+    transition: 0.3s;
+}

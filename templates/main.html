@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- <link rel="shortcut icon" type='image/x-icon' href="{% static 'custom_images/Logo.png' %}"> -->
+            <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+            <title>ChatBox</title>
+        </head>
+        <body>
+            <style type="text/css">
+                .main {
+                    min-height: 90vh;
+                    height: 100%;
+                    background-color: #edece9;
+                }
+            </style>
+            
+            <!-- HEADER -->
+            {% include 'snippets/header.html' %}
+
+            <!-- MAIN BODY -->
+            <div class = 'main'>
+                {% block content %}
+                
+                {% endblock content %}
+            </div>
+
+            <!-- FOOTER -->
+            {% include 'snippets/footer.html' %}
+            
+        </body>
+
+        <!-- scripts -->
+        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    </html>
+        
+    
